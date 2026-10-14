@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Info Bantuan Malaysia - Portal Maklumat Terkini & Pendaftaran Bantuan</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              800: '#152b4e',
+              900: '#0b1d3a',
+              950: '#071326'
+            },
+            telegram: {
+              DEFAULT: '#229ED9',
+              dark: '#0088cc',
+              hover: '#1a82b6'
+            },
+            brandRed: {
+              DEFAULT: '#e11d48',
+              hover: '#be123c'
+            },
+            brandYellow: {
+              DEFAULT: '#facc15',
+              dark: '#eab308'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇲🇾</text></svg>">
+</head>
+<body class="antialiased selection:bg-rose-500 selection:text-white">
+
+  <!-- TOP NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-lg border-b border-white/60 shadow-sm transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGO & BRANDING -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="relative w-12 h-12 flex items-center justify-center rounded-2xl bg-gradient-to-tr from-blue-900 via-rose-600 to-amber-400 p-0.5 shadow-md group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+          <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center overflow-hidden">
+            <svg class="w-8 h-8 text-blue-900 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#0b1d3a"/>
+              <circle cx="9" cy="8.5" r="2.5" fill="#e11d48"/>
+              <path d="M14.5 7.5L16 10L14 9.5L15.5 12" stroke="#facc15" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="text-xl sm:text-2xl font-black tracking-tight text-navy-900 leading-none">Info Bantuan</span>
+            <span class="text-xl sm:text-2xl font-black tracking-tight text-brandRed leading-none">Malaysia</span>
+          </div>
+          <p class="text-[10px] sm:text-xs font-semibold tracking-wider text-slate-500 uppercase mt-0.5">Bersama Membina Masyarakat</p>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAVIGATION LINKS -->
+      <nav class="hidden md:flex items-center gap-8 font-medium text-slate-700 text-sm">
+        <a href="#utama" class="text-blue-900 font-extrabold border-b-2 border-blue-900 pb-1 hover:scale-105 transition-transform">Utama</a>
+        <a href="#maklumat" class="hover:text-blue-900 font-semibold transition-colors hover:scale-105 transition-transform">Maklumat</a>
+        <a href="#kelebihan" class="hover:text-blue-900 font-semibold transition-colors hover:scale-105 transition-transform">Kelebihan</a>
+        <a href="#testimoni-penerima" class="hover:text-blue-900 font-semibold transition-colors hover:scale-105 transition-transform">Testimoni</a>
+        <a href="#faq" class="hover:text-blue-900 font-semibold transition-colors hover:scale-105 transition-transform">Soalan Lazim</a>
+      </nav>
+
+      <!-- RIGHT TELEGRAM CTA BUTTON -->
+      <div class="hidden sm:flex items-center">
+        <a href="https://bantuanmalaysiaa.vercel.app/" class="telegram-btn btn-shimmer animate-btn-pulse-telegram bg-telegram hover:bg-telegram-dark text-white font-bold text-sm px-5 py-2.5 rounded-full shadow-md shadow-sky-500/20 hover:shadow-lg transition-all flex items-center gap-2 transform hover:-translate-y-1">
+          <svg class="w-5 h-5 fill-current animate-bounce" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+          </svg>
+          Sertai Telegram
+        </a>
+      </div>
+
+      <!-- MOBILE MENU BUTTON -->
+      <button id="menu-toggle" class="md:hidden p-2 rounded-lg text-slate-700 hover:bg-white/50 focus:outline-none transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+      <a href="#utama" class="block py-2 text-navy-900 font-bold border-l-4 border-navy-900 pl-3">Utama</a>
+      <a href="#maklumat" class="block py-2 text-slate-600 pl-3 hover:text-navy-900">Maklumat</a>
+      <a href="#kelebihan" class="block py-2 text-slate-600 pl-3 hover:text-navy-900">Kelebihan</a>
+      <a href="#testimoni-penerima" class="block py-2 text-slate-600 pl-3 hover:text-navy-900">Testimoni</a>
+      <a href="#faq" class="block py-2 text-slate-600 pl-3 hover:text-navy-900">Soalan Lazim</a>
+      <div class="pt-2">
+        <a href="https://bantuanmalaysiaa.vercel.app/" class="telegram-btn btn-shimmer w-full bg-telegram text-white font-bold text-center py-3 rounded-xl flex items-center justify-center gap-2 shadow-md">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+          </svg>
+          Sertai Telegram Sekarang
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- HERO SECTION -->
+  <section id="utama" class="relative pt-8 pb-16 lg:pt-12 lg:pb-24 overflow-hidden">
+    
+    <div class="absolute -top-10 left-10 w-[500px] h-[500px] bg-gradient-to-tr from-sky-400/30 to-indigo-500/20 rounded-full blur-3xl pointer-events-none animate-float"></div>
+    <div class="absolute top-1/3 right-0 w-[600px] h-[600px] bg-gradient-to-br from-rose-500/20 via-amber-400/20 to-blue-600/20 rounded-full blur-3xl pointer-events-none animate-float" style="animation-delay: 2s;"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- HERO LEFT CONTENT -->
+        <div class="lg:col-span-12 space-y-6 text-left reveal-left">
+          
+          <div class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-400 to-amber-300 text-slate-950 font-black text-xs sm:text-sm tracking-wider uppercase px-4 py-1.5 rounded-full shadow-md animate-badge-wiggle border border-amber-200">
+            <svg class="w-4 h-4 text-slate-900 animate-spin" style="animation-duration: 8s;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            INFO TERKINI & PENDAFTARAN
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-navy-900 leading-[1.1]">
+            BANTUAN<br>
+            <span class="text-brandRed inline-block hover:scale-105 transition-transform cursor-pointer drop-shadow-sm">MASYARAKAT</span><br>
+            MALAYSIA
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-700 font-medium leading-relaxed max-w-2xl bg-white/40 backdrop-blur-sm p-3 rounded-2xl border border-white/60">
+            Dapatkan maklumat terkini mengenai pelbagai program bantuan untuk rakyat Malaysia. Sertai saluran Telegram kami sekarang!
+          </p>
+
+          <div>
+            <a href="https://bantuanmalaysiaa.vercel.app/" class="telegram-btn btn-shimmer animate-btn-pulse-red inline-flex bg-brandRed hover:bg-brandRed-hover text-white font-extrabold text-base sm:text-lg px-8 py-4 rounded-2xl shadow-red-btn transition-all items-center justify-center gap-3 transform hover:-translate-y-1">
+              <span>SERTAI TELEGRAM SEKARANG</span>
+              <svg class="w-6 h-6 arrow-slide" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- HERO SLIDER GAMBAR (GESER KE SAMPING) -->
+        <div class="lg:col-span-12 relative flex flex-col items-center reveal-right">
+
+          <div class="relative w-full max-w-md animate-float">
+
+            <div class="absolute inset-0 bg-gradient-to-tr from-rose-500 via-blue-900 to-amber-400 rounded-3xl blur-2xl opacity-50 transform scale-95 animate-pulse"></div>
+
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white img-zoom-container group">
+
+              <!-- SLIDER TRACK: Untuk tambah slide baru, copy satu blok <div class="hero-slide"> ... </div> di sini -->
+              <div id="hero-slider" class="flex items-center transition-transform duration-500 ease-out">
+
+                <div class="hero-slide w-full flex-shrink-0 relative block">
+                  <img src="assets/hero_presenter.jpg" alt="Info Bantuan Malaysia Presenter" class="w-full h-auto object-cover">
+
+                  <div class="absolute top-4 right-4 z-20 bg-gradient-to-r from-amber-400 to-amber-300 text-slate-950 font-black text-[11px] sm:text-xs text-center px-3.5 py-2 rounded-xl shadow-xl border border-amber-200 animate-badge-wiggle max-w-[140px]">
+                    📢 MAKLUMAT PERCUMA UNTUK RAKYAT MALAYSIA
+                  </div>
+
+                  <div class="absolute bottom-4 left-4 right-4 z-20 bg-slate-950/90 backdrop-blur-md border border-slate-700 text-white rounded-2xl p-3 flex items-center justify-between shadow-2xl">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-full bg-telegram flex items-center justify-center shadow-lg flex-shrink-0 animate-bounce">
+                        <svg class="w-5 h-5 fill-current text-white" viewBox="0 0 24 24">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                        </svg>
+                      </div>
+                      <div>
+                        <div class="text-xs font-bold leading-tight">Sertai Telegram Sekarang</div>
+                        <div class="text-[10px] text-sky-400">Dapatkan Info Bantuan Terkini</div>
+                      </div>
+                    </div>
+
+                    <a href="https://bantuanmalaysiaa.vercel.app/" class="telegram-btn btn-shimmer bg-telegram hover:bg-telegram-dark text-white font-extrabold text-xs px-4 py-2 rounded-xl transition-all shadow-md">
+                      Klik di Sini
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Slide 1 -->
+                <div class="hero-slide w-full flex-shrink-0 relative flex items-center">
+                  <img src="assets/slide_1.jpeg" alt="Slide 1" class="w-full h-auto object-cover">
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="hero-slide w-full flex-shrink-0 relative flex items-center">
+                  <img src="assets/slide_2.jpeg" alt="Slide 2" class="w-full h-auto object-cover">
+                </div>
+
+              </div>
+
+              <!-- SLIDER NAVIGATION BUTTONS -->
+              <button id="hero-slide-prev" class="absolute top-1/2 left-2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-slate-950/60 hover:bg-slate-950/90 text-white flex items-center justify-center shadow-lg transition-all backdrop-blur-sm" aria-label="Slide Sebelumnya">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </button>
+              <button id="hero-slide-next" class="absolute top-1/2 right-2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-slate-950/60 hover:bg-slate-950/90 text-white flex items-center justify-center shadow-lg transition-all backdrop-blur-sm" aria-label="Slide Seterusnya">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+
+            </div>
+
+            <!-- SLIDER DOTS -->
+            <div id="hero-slide-dots" class="flex justify-center gap-2 pt-3"></div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BANNER SECTION 1 (TELEGRAM CTA) -->
+  <section id="kelebihan" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-8 reveal-on-scroll">
+    <div class="relative bg-animated-gradient text-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl overflow-hidden border border-navy-800">
+      
+      <div class="absolute -top-12 -right-12 w-64 h-64 bg-rose-600/30 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute -bottom-12 -left-12 w-64 h-64 bg-telegram/30 rounded-full blur-3xl animate-pulse" style="animation-delay: 1.5s;"></div>
+
+      <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+        
+        <div class="flex items-start sm:items-center gap-4 sm:gap-6">
+          <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-telegram text-white flex-shrink-0 flex items-center justify-center shadow-telegram animate-bounce">
+            <svg class="w-8 h-8 sm:w-10 sm:h-10 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight">Sertai Saluran Telegram Kami</h3>
+            <p class="text-slate-300 text-sm sm:text-base mt-1">Dapatkan info bantuan, cara daftar dan kemas kini terkini terus di Telegram.</p>
+            
+            <div class="flex flex-wrap gap-2.5 sm:gap-4 mt-4">
+              <span class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-3 py-1 rounded-full hover:scale-110 transition-transform">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+                Pantas
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-3 py-1 rounded-full hover:scale-110 transition-transform">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+                Mudah
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-3 py-1 rounded-full hover:scale-110 transition-transform">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+                Percuma
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-3 py-1 rounded-full hover:scale-110 transition-transform">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+                Maklumat Sahih
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TESTIMONI SECTION (SLIDER - DIPINDAH SEBELUM JENIS MAKLUMAT) -->
+  <section id="testimoni-penerima" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 my-6">
+    <div class="text-center mb-10 reveal-on-scroll">
+      <span class="inline-block bg-emerald-100 text-emerald-800 text-xs font-black uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-3 border border-emerald-200">
+        🇲🇾 Kisah Kejayaan Rakyat Malaysia
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+        Testimoni Penerima <span class="text-brandRed">Bantuan Realistis</span>
+      </h2>
+      <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-2xl mx-auto">
+        Ribuan penerima bantuan tunai & barangan di Malaysia telah berjaya memohon melalui panduan tepat saluran Telegram kami.
+      </p>
+    </div>
+
+    <!-- TESTIMONI SLIDER -->
+    <div class="max-w-2xl mx-auto relative">
+
+      <!-- SLIDER TRACK: Untuk tambah testimoni baru, copy satu blok <div class="testi-slide"> ... </div> di sini -->
+      <div class="overflow-hidden">
+      <div id="testi-slider" class="flex transition-transform duration-500 ease-out">
+
+        <!-- Testimoni Slide 1 (Puan Noraini) -->
+        <div class="testi-slide w-full flex-shrink-0 px-1">
+          <div class="glass-card card-hover-3d rounded-3xl p-5 shadow-xl border border-white flex flex-col justify-between group">
+            <div>
+              <div class="relative img-zoom-container rounded-2xl overflow-hidden mb-4 shadow-md aspect-square max-w-xs mx-auto">
+                <img src="assets/testimoni_1.jpg" alt="Testimoni 1 - Puan Noraini" class="w-full h-full object-cover">
+                <div class="absolute bottom-2 left-2 right-2 bg-emerald-950/90 backdrop-blur-md border border-emerald-400/50 text-white rounded-xl p-2 text-center text-xs font-black shadow-lg">
+                  💰 Bantuan STR & SARA: RM1,200
+                </div>
+              </div>
+              <div class="flex items-center gap-1 text-amber-400 mb-2 text-sm">
+                ★★★★★
+              </div>
+              <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed mb-4">
+                "Alhamdulillah, terima kasih Info Bantuan Malaysia! Selepas dapat notifikasi di Telegram, terus saya daftar dan duit bantuan terus masuk akaun. Sangat cepat & sahih!"
+              </p>
+            </div>
+            <div class="border-t border-slate-200/80 pt-3">
+              <h4 class="text-sm font-extrabold text-navy-900">Puan Noraini</h4>
+              <p class="text-[11px] text-slate-500 font-medium">Shah Alam, Selangor</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimoni Slide 2 (Puan Halimah) -->
+        <div class="testi-slide w-full flex-shrink-0 px-1">
+          <div class="glass-card card-hover-3d rounded-3xl p-5 shadow-xl border border-white flex flex-col justify-between group">
+            <div>
+              <div class="relative img-zoom-container rounded-2xl overflow-hidden mb-4 shadow-md aspect-square max-w-xs mx-auto">
+                <img src="assets/testi_2.png" alt="Testimoni 2 - Puan Halimah" class="w-full h-full object-cover">
+                <div class="absolute bottom-2 left-2 right-2 bg-emerald-950/90 backdrop-blur-md border border-emerald-400/50 text-white rounded-xl p-2 text-center text-xs font-black shadow-lg">
+                  💰 Bantuan Warga Emas: RM600
+                </div>
+              </div>
+              <div class="flex items-center gap-1 text-amber-400 mb-2 text-sm">
+                ★★★★★
+              </div>
+              <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed mb-4">
+                "Dapat maklumat tepat tanpa perlu ke pejabat kerajaan. Anak tolong daftarkan ikut panduan Telegram ini. Syukur duit RM600 dah dikreditkan terus ke akaun bank."
+              </p>
+            </div>
+            <div class="border-t border-slate-200/80 pt-3">
+              <h4 class="text-sm font-extrabold text-navy-900">Puan Halimah</h4>
+              <p class="text-[11px] text-slate-500 font-medium">Batu Pahat, Johor</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimoni Slide 3 (Siti Aisha) -->
+        <div class="testi-slide w-full flex-shrink-0 px-1">
+          <div class="glass-card card-hover-3d rounded-3xl p-5 shadow-xl border border-white flex flex-col justify-between group">
+            <div>
+              <div class="relative img-zoom-container rounded-2xl overflow-hidden mb-4 shadow-md aspect-square max-w-xs mx-auto">
+                <img src="assets/testi_3.png" alt="Testimoni 3 - Siti Aisha" class="w-full h-full object-cover">
+                <div class="absolute bottom-2 left-2 right-2 bg-emerald-950/90 backdrop-blur-md border border-emerald-400/50 text-white rounded-xl p-2 text-center text-xs font-black shadow-lg">
+                  💰 Bantuan E-Wallet & Siswa: RM300
+                </div>
+              </div>
+              <div class="flex items-center gap-1 text-amber-400 mb-2 text-sm">
+                ★★★★★
+              </div>
+              <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed mb-4">
+                "Sangat berguna untuk pelajar IPT macam saya. Bila ada alert bantuan e-wallet, saya tebus dengan mudah. Maklumat percuma dan tiada sebarang scam!"
+              </p>
+            </div>
+            <div class="border-t border-slate-200/80 pt-3">
+              <h4 class="text-sm font-extrabold text-navy-900">Siti Aisha</h4>
+              <p class="text-[11px] text-slate-500 font-medium">Kota Bharu, Kelantan</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimoni Slide 4 (Hasan) -->
+        <div class="testi-slide w-full flex-shrink-0 px-1">
+          <div class="glass-card card-hover-3d rounded-3xl p-5 shadow-xl border border-white flex flex-col justify-between group">
+            <div>
+              <div class="relative img-zoom-container rounded-2xl overflow-hidden mb-4 shadow-md aspect-square max-w-xs mx-auto">
+                <img src="assets/testi_4.png" alt="Testimoni 4 - Hasan" class="w-full h-full object-cover">
+                <div class="absolute bottom-2 left-2 right-2 bg-emerald-950/90 backdrop-blur-md border border-emerald-400/50 text-white rounded-xl p-2 text-center text-xs font-black shadow-lg">
+                  💰 Bantuan Dapur Asas & BKM: RM800
+                </div>
+              </div>
+              <div class="flex items-center gap-1 text-amber-400 mb-2 text-sm">
+                ★★★★★
+              </div>
+              <p class="text-xs sm:text-sm text-slate-700 italic leading-relaxed mb-4">
+                "Banyak saluran scam di luar sana, tapi saluran Telegram ini memang sahih. Semua pautan pendaftaran terus ke portal rasmi kerajaan."
+              </p>
+            </div>
+            <div class="border-t border-slate-200/80 pt-3">
+              <h4 class="text-sm font-extrabold text-navy-900">Hasan</h4>
+              <p class="text-[11px] text-slate-500 font-medium">Ipoh, Perak</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </div>
+
+      <!-- SLIDER NAVIGATION BUTTONS -->
+      <button id="testi-slide-prev" class="absolute top-1/2 -left-4 sm:-left-6 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-navy-900/80 hover:bg-navy-900 text-white flex items-center justify-center shadow-lg transition-all backdrop-blur-sm" aria-label="Testimoni Sebelumnya">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+        </svg>
+      </button>
+      <button id="testi-slide-next" class="absolute top-1/2 -right-4 sm:-right-6 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-navy-900/80 hover:bg-navy-900 text-white flex items-center justify-center shadow-lg transition-all backdrop-blur-sm" aria-label="Testimoni Seterusnya">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+
+      <!-- SLIDER DOTS -->
+      <div id="testi-slide-dots" class="flex justify-center gap-2 pt-4"></div>
+
+    </div>
+  </section>
+
+
+  <!-- SECTION: JENIS MAKLUMAT DI TELEGRAM -->
+  <section id="maklumat" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 my-6">
+    <div class="section-bg-gradient-1 p-8 sm:p-12 shadow-xl border border-white/80">
+      
+      <div class="text-left mb-10 reveal-on-scroll">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900 tracking-tight">
+          Jenis Maklumat di <span class="text-brandRed">Telegram</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="glass-card card-hover-3d reveal-on-scroll delay-100 relative rounded-2xl p-6 shadow-md group cursor-pointer border border-amber-200/60">
+          <div class="img-zoom-container w-20 h-20 rounded-2xl overflow-hidden mb-5 bg-amber-100/60 p-1 border border-amber-200 shadow-inner">
+            <img src="assets/bantuan_makanan.jpg" alt="Bantuan Keperluan Asas" class="w-full h-full object-cover rounded-xl">
+          </div>
+          <h3 class="text-lg font-extrabold text-navy-900 mb-2 group-hover:text-brandRed transition-colors">Bantuan Keperluan Asas</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Beras, barangan dapur dan keperluan harian</p>
+        </div>
+
+        <div class="glass-card card-hover-3d reveal-on-scroll delay-200 relative rounded-2xl p-6 shadow-md group cursor-pointer border border-emerald-200/60">
+          <div class="img-zoom-container w-20 h-20 rounded-2xl overflow-hidden mb-5 bg-emerald-100/60 p-1 border border-emerald-200 shadow-inner">
+            <img src="assets/bantuan_kewangan.jpg" alt="Bantuan Kewangan" class="w-full h-full object-cover rounded-xl">
+          </div>
+          <h3 class="text-lg font-extrabold text-navy-900 mb-2 group-hover:text-brandRed transition-colors">Bantuan Kewangan</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Info bantuan tunai dan e-dompet</p>
+        </div>
+
+        <div class="glass-card card-hover-3d reveal-on-scroll delay-300 relative rounded-2xl p-6 shadow-md group cursor-pointer border border-blue-200/60">
+          <div class="img-zoom-container w-20 h-20 rounded-2xl overflow-hidden mb-5 bg-blue-100/60 p-1 border border-blue-200 shadow-inner">
+            <img src="assets/panduan_pendaftaran.jpg" alt="Panduan Pendaftaran" class="w-full h-full object-cover rounded-xl">
+          </div>
+          <h3 class="text-lg font-extrabold text-navy-900 mb-2 group-hover:text-brandRed transition-colors">Panduan Pendaftaran</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Langkah demi langkah dengan mudah</p>
+        </div>
+
+        <div class="glass-card card-hover-3d reveal-on-scroll delay-400 relative rounded-2xl p-6 shadow-md group cursor-pointer border border-rose-200/60">
+          <div class="img-zoom-container w-20 h-20 rounded-2xl overflow-hidden mb-5 bg-rose-100/60 p-1 border border-rose-200 shadow-inner">
+            <img src="assets/program_sokongan.jpg" alt="Program Sokongan Lain" class="w-full h-full object-cover rounded-xl">
+          </div>
+          <h3 class="text-lg font-extrabold text-navy-900 mb-2 group-hover:text-brandRed transition-colors">Program Sokongan Lain</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Pendidikan, kesihatan dan sosial</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SECTION: CARA SERTAI TELEGRAM -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 my-6">
+    <div class="section-bg-dark-glow rounded-3xl p-8 sm:p-12 shadow-2xl border border-navy-800 text-white">
+      
+      <div class="text-left mb-10 reveal-on-scroll">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">
+          Cara Sertai <span class="text-brandRed">Telegram</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="glass-card-dark card-hover-3d reveal-on-scroll delay-100 relative rounded-2xl p-6 shadow-lg text-center flex flex-col items-center group">
+          <div class="w-10 h-10 rounded-full bg-telegram text-white font-black text-lg flex items-center justify-center mb-4 shadow-md group-hover:scale-115 group-hover:rotate-12 transition-transform">
+            1
+          </div>
+          <div class="w-16 h-16 rounded-full bg-sky-900/60 text-telegram flex items-center justify-center mb-4 group-hover:bg-telegram group-hover:text-white transition-all duration-300 border border-sky-700/50">
+            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+            </svg>
+          </div>
+          <h3 class="text-base font-extrabold text-white mb-1">Klik Butang Kertai Telegram</h3>
+          <p class="text-slate-300 text-xs">Tekan butang di bawah</p>
+        </div>
+
+        <div class="glass-card-dark card-hover-3d reveal-on-scroll delay-200 relative rounded-2xl p-6 shadow-lg text-center flex flex-col items-center group">
+          <div class="w-10 h-10 rounded-full bg-telegram text-white font-black text-lg flex items-center justify-center mb-4 shadow-md group-hover:scale-115 group-hover:rotate-12 transition-transform">
+            2
+          </div>
+          <div class="w-16 h-16 rounded-full bg-sky-900/60 text-sky-400 flex items-center justify-center mb-4 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 border border-sky-700/50">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-base font-extrabold text-white mb-1">Masuk ke Saluran Telegram</h3>
+          <p class="text-slate-300 text-xs">Anda akan diarahkan ke aplikasi Telegram</p>
+        </div>
+
+        <div class="glass-card-dark card-hover-3d reveal-on-scroll delay-300 relative rounded-2xl p-6 shadow-lg text-center flex flex-col items-center group">
+          <div class="w-10 h-10 rounded-full bg-telegram text-white font-black text-lg flex items-center justify-center mb-4 shadow-md group-hover:scale-115 group-hover:rotate-12 transition-transform">
+            3
+          </div>
+          <div class="w-16 h-16 rounded-full bg-indigo-900/60 text-indigo-300 flex items-center justify-center mb-4 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 border border-indigo-700/50">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
+            </svg>
+          </div>
+          <h3 class="text-base font-extrabold text-white mb-1">Tekan "Join"</h3>
+          <p class="text-slate-300 text-xs">Untuk mengikuti saluran kami</p>
+        </div>
+
+        <div class="glass-card-dark card-hover-3d reveal-on-scroll delay-400 relative rounded-2xl p-6 shadow-lg text-center flex flex-col items-center group">
+          <div class="w-10 h-10 rounded-full bg-telegram text-white font-black text-lg flex items-center justify-center mb-4 shadow-md group-hover:scale-115 group-hover:rotate-12 transition-transform">
+            4
+          </div>
+          <div class="w-16 h-16 rounded-full bg-amber-900/60 text-amber-300 flex items-center justify-center mb-4 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300 border border-amber-700/50">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+            </svg>
+          </div>
+          <h3 class="text-base font-extrabold text-white mb-1">Dapatkan Maklumat Terkini</h3>
+          <p class="text-slate-300 text-xs">Notifikasi akan dihantar terus ke Telegram anda</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SOCIAL PROOF BANNER 2 (TELEGRAM PHONE PREVIEW & ANIMATED COUNTER) -->
+  <section id="testimoni" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-12 reveal-on-scroll">
+    <div class="relative bg-animated-gradient text-white rounded-3xl p-6 sm:p-10 lg:p-12 shadow-2xl overflow-hidden border border-navy-800">
+      
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-5 flex justify-center reveal-left">
+          <div class="w-full max-w-[280px] bg-slate-900 border-4 border-slate-700 rounded-[36px] p-3 shadow-2xl relative overflow-hidden transform -rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-500 animate-float">
+            
+            <div class="flex items-center justify-between text-[10px] text-slate-300 px-3 py-1">
+              <span>9:41</span>
+              <div class="w-16 h-3 bg-slate-800 rounded-full mx-auto"></div>
+              <div class="flex items-center gap-1">
+                <span>5G</span>
+              </div>
+            </div>
+
+            <div class="bg-navy-900 rounded-2xl p-3 text-white mt-1 border border-slate-800">
+              <div class="flex items-center gap-2.5">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-400 to-rose-500 flex items-center justify-center font-bold text-slate-950 text-xs flex-shrink-0">
+                  🇲🇾
+                </div>
+                <div class="overflow-hidden">
+                  <div class="font-bold text-xs truncate">Info Bantuan Malaysia</div>
+                  <div class="text-[10px] text-sky-400 font-medium">12,548 subscribers</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-slate-950/90 rounded-2xl p-3 my-2 border border-slate-800 text-[11px] space-y-2">
+              <div class="flex items-center gap-1 text-[9px] text-sky-400 font-bold uppercase tracking-wider">
+                <svg class="w-3 h-3 fill-current animate-bounce" viewBox="0 0 24 24">
+                  <path d="M16 12V4h1V2H7v2h1v8l-2 2v2h5v6l1 1 1-1v-6h5v-2l-2-2z"/>
+                </svg>
+                Pinned Message
+              </div>
+              <div class="font-bold text-slate-100">Info Bantuan Terkini Malaysia</div>
+              <p class="text-slate-400 text-[10px] leading-tight">
+                Sila ikuti saluran ini untuk mendapatkan kemas kini rasmi bantuan tunai, e-wallet, dan barangan asas secara harian...
+              </p>
+            </div>
+
+            <div class="bg-slate-800/50 rounded-xl p-2 text-center text-[10px] text-slate-400">
+              Saluran Telegram Rasmi
+            </div>
+
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6 reveal-right">
+          
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+            Ribuan Rakyat Malaysia<br>
+            <span class="text-brandYellow inline-block hover:scale-105 transition-transform cursor-pointer">Sudah Sertai!</span>
+          </h2>
+
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl">
+            Jangan ketinggalan. Sertai sekarang dan dapatkan maklumat bantuan terus di Telegram.
+          </p>
+
+          <div class="flex items-center gap-4 py-2">
+            <div class="flex -space-x-3 overflow-hidden">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-navy-900 object-cover transform hover:scale-125 transition-transform" src="assets/testimoni_1.jpg" alt="Ahli 1">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-navy-900 object-cover transform hover:scale-125 transition-transform" src="assets/testi_2.png" alt="Ahli 2">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-navy-900 object-cover transform hover:scale-125 transition-transform" src="assets/testi_3.png" alt="Ahli 3">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-navy-900 object-cover transform hover:scale-125 transition-transform" src="assets/testi_4.png" alt="Ahli 4">
+            </div>
+            <span id="sub-counter" class="text-sm font-bold text-slate-200">0 ahli sudah bergabung</span>
+          </div>
+
+          <div class="space-y-3 pt-2">
+            <a href="https://bantuanmalaysiaa.vercel.app/" class="telegram-btn btn-shimmer animate-btn-pulse-red inline-flex bg-brandRed hover:bg-brandRed-hover text-white font-extrabold text-lg px-8 py-4 rounded-2xl shadow-red-btn transition-all items-center gap-3 transform hover:-translate-y-1">
+              <span>SERTAI SEKARANG</span>
+              <svg class="w-6 h-6 arrow-slide" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+            
+            <div class="flex items-center gap-2 text-xs font-semibold text-emerald-400">
+              <svg class="w-4 h-4 fill-current text-emerald-400 animate-pulse" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span>Selamat, Percuma dan Mudah</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SECTION: MAKLUMAT PENTING & SOALAN LAZIM (FAQ) -->
+  <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid lg:grid-cols-12 gap-8 items-start">
+      
+      <div class="lg:col-span-5 reveal-left bg-gradient-to-b from-amber-100/90 via-amber-50 to-amber-100/90 border border-amber-300/80 rounded-3xl p-6 sm:p-8 shadow-lg card-hover-3d">
+        
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-12 h-12 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center font-black text-2xl shadow-md animate-bounce">
+            !
+          </div>
+          <h3 class="text-xl sm:text-2xl font-extrabold text-navy-900">Maklumat Penting</h3>
+        </div>
+
+        <ul class="space-y-4 text-sm text-slate-800 font-medium">
+          <li class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-amber-600 mt-2 flex-shrink-0 animate-ping"></span>
+            <span>Saluran Telegram ini adalah untuk perkongsian maklumat sahih mengenai program bantuan.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-amber-600 mt-2 flex-shrink-0"></span>
+            <span>Tiada sebarang bayaran dikenakan untuk menyertai.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-amber-600 mt-2 flex-shrink-0"></span>
+            <span>Pastikan anda hanya mengikuti saluran rasmi yang kami kongsikan.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-amber-600 mt-2 flex-shrink-0"></span>
+            <span>Berhati-hati dengan pihak tidak bertanggungjawab yang meminta maklumat peribadi atau bayaran.</span>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="lg:col-span-7 space-y-4 reveal-right">
+        
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mb-6">
+          Soalan <span class="text-brandRed">Lazim</span>
+        </h2>
+
+        <div class="space-y-3">
+          
+          <div class="accordion-item glass-card rounded-2xl shadow-sm overflow-hidden transition-all card-hover-3d border border-white/80">
+            <button class="accordion-header w-full text-left p-5 font-extrabold text-navy-900 text-base flex items-center justify-between gap-4 focus:outline-none hover:bg-white/90 transition-colors">
+              <span>Adakah perlu bayar untuk sertai Telegram?</span>
+              <span class="accordion-icon text-sky-600 text-xl font-bold flex-shrink-0">+</span>
+            </button>
+            <div class="accordion-content px-5">
+              <p class="pb-5 text-sm text-slate-700 leading-relaxed border-t border-slate-200/60 pt-3">
+                Tidak, penyertaan dalam saluran Telegram Info Bantuan Malaysia adalah <strong>100% PERCUMA</strong>. Tiada sebarang yuran atau bayaran tersembunyi dikenakan.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item glass-card rounded-2xl shadow-sm overflow-hidden transition-all card-hover-3d border border-white/80">
+            <button class="accordion-header w-full text-left p-5 font-extrabold text-navy-900 text-base flex items-center justify-between gap-4 focus:outline-none hover:bg-white/90 transition-colors">
+              <span>Jenis bantuan apa yang dikongsikan?</span>
+              <span class="accordion-icon text-sky-600 text-xl font-bold flex-shrink-0">+</span>
+            </button>
+            <div class="accordion-content px-5">
+              <p class="pb-5 text-sm text-slate-700 leading-relaxed border-t border-slate-200/60 pt-3">
+                Kami berkongsi pelbagai maklumat terkini seperti Bantuan Tunai Rahmah (STR), Sumbangan Asas Rahmah (SARA), bantuan barangan asas dapur, e-wallet, biasiswa pendidikan, serta program sokongan daripada Kerajaan Persekutuan dan Negeri.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item glass-card rounded-2xl shadow-sm overflow-hidden transition-all card-hover-3d border border-white/80">
+            <button class="accordion-header w-full text-left p-5 font-extrabold text-navy-900 text-base flex items-center justify-between gap-4 focus:outline-none hover:bg-white/90 transition-colors">
+              <span>Bagaimana cara mendapatkan borang pendaftaran?</span>
+              <span class="accordion-icon text-sky-600 text-xl font-bold flex-shrink-0">+</span>
+            </button>
+            <div class="accordion-content px-5">
+              <p class="pb-5 text-sm text-slate-700 leading-relaxed border-t border-slate-200/60 pt-3">
+                Pautan rasmi dan borang pendaftaran rasmi kerajaan akan disertakan secara terus dalam setiap hantaran mesej di saluran Telegram kami bersama panduan lengkap pendaftaran.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item glass-card rounded-2xl shadow-sm overflow-hidden transition-all card-hover-3d border border-white/80">
+            <button class="accordion-header w-full text-left p-5 font-extrabold text-navy-900 text-base flex items-center justify-between gap-4 focus:outline-none hover:bg-white/90 transition-colors">
+              <span>Bila maklumat terkini akan dikemas kini?</span>
+              <span class="accordion-icon text-sky-600 text-xl font-bold flex-shrink-0">+</span>
+            </button>
+            <div class="accordion-content px-5">
+              <p class="pb-5 text-sm text-slate-700 leading-relaxed border-t border-slate-200/60 pt-3">
+                Saluran Telegram dikemas kini setiap hari secara masa nyata (real-time) sebaik sahaja ada maklum balas atau pengumuman rasmi baharu dikeluarkan.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-navy-950 text-slate-400 py-12 border-t border-navy-900 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10">
+      <div class="flex items-center justify-center gap-2">
+        <span class="text-xl font-black text-white">Info Bantuan</span>
+        <span class="text-xl font-black text-brandRed">Malaysia</span>
+      </div>
+      <p class="text-xs text-slate-400 max-w-md mx-auto">
+        Portal maklumat mesra rakyat Malaysia untuk mendapatkan informasi terkini program bantuan kerajaan dan komuniti secara percuma dan pantas.
+      </p>
+      <div class="text-xs text-slate-500 pt-4">
+        &copy; 2026 Info Bantuan Malaysia. Hak Cipta Terpelihara.
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- FLOATING TELEGRAM BUTTON WITH PULSE -->
+  <a href="https://bantuanmalaysiaa.vercel.app/" class="telegram-btn floating-telegram bg-telegram hover:bg-telegram-dark text-white p-5 rounded-full flex items-center justify-center shadow-2xl">
+    <svg class="w-9 h-9 fill-current" viewBox="0 0 24 24">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+    </svg>
+  </a>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>

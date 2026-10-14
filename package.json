@@ -1,0 +1,12 @@
+{
+  "name": "info-bantuan-malaysia",
+  "version": "1.0.0",
+  "description": "Laman Web Landing Page Info Bantuan Malaysia",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": ["bantuan-malaysia", "telegram", "landing-page"],
+  "author": "Antigravity",
+  "license": "MIT"
+}

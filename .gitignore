@@ -1,0 +1,17 @@
+# Letta Code agent data
+.letta/
+
+# File sementara pembuat gambar
+temp_*.jpg
+temp_*.png
+
+# Duplikat foto dengan spasi (versi underscore dipakai di HTML)
+testi 2.png
+testi 3.png
+testi 4.png
+
+# Node
+node_modules/
+
+.vercel
+.env*
